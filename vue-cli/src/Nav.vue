@@ -1,32 +1,20 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow" id="nav">
-  <span class="navbar-brand"><img class='logo' src='./assets/SunshineLogo.png'>Sunshine Roofing Company</span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#about">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#services">Products &amp; Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#gallery">Gallery</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Free Quote</a>
-      </li>
-    </ul>
-    <span class="navbar-text">
-      <a href='tel:4357222539'>Uintah Basin: (435) 722-2539</a> | <a href='tel:4358817820'>Bear Lake: (435) 881-7820</a>
-    </span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+  <b-navbar toggleable='lg' type='dark' variant='dark' class='shadow' sticky id='nav'>
+  <b-navbar-brand><img class='logo' src='./assets/SunshineLogo.png'>Sunshine Roofing Company</b-navbar-brand>
+  <b-navbar-toggle target='nav-collapse'></b-navbar-toggle>
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class='links'>
+        <b-nav-item href="#about">About Us</b-nav-item>
+        <b-nav-item href="#services">Products &amp; Services</b-nav-item>
+        <b-nav-item href="#gallery">Gallery</b-nav-item>
+        <b-nav-item href="#contact">Free Quote</b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="tel:4357222539">Uintah Basin: (435) 722-2539</b-nav-item>
+        <b-nav-item href="tel:4358817820">Bear Lake: (435) 881-7820</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>
@@ -51,11 +39,6 @@ export default {
 
 .logo {
   width: 250px;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
 }
 
 h1, h2, h3, p {

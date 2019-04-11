@@ -122,24 +122,21 @@ export default {
 }
 
 .card-columns {
-  column-count: 4;
-}
-
-@media screen and (max-width: 576px) {
-  .card-columns {
+  @include media-breakpoint-between(xs, sm) {
     column-count: 1;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .card-columns {
+  @include media-breakpoint-between(sm, md) {
     column-count: 2;
   }
-}
 
-@media screen and (max-width: 992px) {
-  .card-columns {
+  @include media-breakpoint-between(md, lg) {
     column-count: 3;
   }
+
+  @include media-breakpoint-between(lg, xl) {
+    column-count: 4;
+  }
+
 }
 </style>

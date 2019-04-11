@@ -6,6 +6,12 @@ import Services from './Services.vue'
 import Gallery from './Gallery.vue'
 import Contact from './Contact.vue'
 import Footer from './Footer.vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 new Vue({
   el: '#header',
@@ -41,3 +47,28 @@ new Vue({
   el: '#footer',
   render: h => h(Footer)
 })
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".links a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 200
+      }, 500, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash - 200;
+      });
+    } // End if
+  });
+});
