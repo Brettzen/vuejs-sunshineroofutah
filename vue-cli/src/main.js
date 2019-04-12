@@ -50,7 +50,7 @@ new Vue({
 
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $(".links a").on('click', function(event) {
+  $("#nav a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -67,7 +67,7 @@ $(document).ready(function(){
       }, 500, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash - 200;
+          // window.location.hash = hash;
       });
     } // End if
   });

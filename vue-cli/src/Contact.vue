@@ -9,11 +9,11 @@
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="text" class="form-control" id="email" placeholder="Your email address" required>
+          <input type="email" class="form-control" id="email" placeholder="Your email address" required>
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="text" class="form-control" id="phone" placeholder="Your phone number">
+          <input type="tel" class="form-control" id="phone" placeholder="Your phone number">
         </div>
         <div class="form-group">
           <label for="phone">Message</label>
